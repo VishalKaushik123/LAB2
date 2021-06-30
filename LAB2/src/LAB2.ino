@@ -16,9 +16,13 @@ void setup() {
 // loop() runs over and over again, as quickly as it can execute.
 void loop() {
   // The core of your code will likely live here.
+
+  // creates an interger variable called value that will store input from A5
   uint16_t value;
   Serial.begin(9600);
+  //stores number 0-4095 into the variable value
   value = analogRead(A5);
+  //prints put the variable value in the serial monitor
   Serial.println(value);
   //turns the light on
   digitalWrite(D5, HIGH);
